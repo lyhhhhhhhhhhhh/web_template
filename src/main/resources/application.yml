@@ -1,0 +1,67 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: template
+  # 激活开发环境配置  
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://124.222.136.26:3306/template_sql?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: liyuhang
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+# MyBatis Plus配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+  mapper-locations: classpath:mapper/*.xml
+
+# Knife4j配置
+knife4j:
+  enable: true
+  openapi:
+    title: 后端模板接口文档
+    description: Spring Boot+MybatisPlus+Sa-Token实现的后端模板
+    email: example@example.com
+    version: 1.0.0
+    group:
+      default:
+        group-name: 默认分组
+        api-rule: package
+        api-rule-resources:
+          - com.example.template.controller
+
+# Sa-Token配置
+sa-token:
+  # token名称 (同时也是cookie名称)
+  token-name: token
+  # token有效期，单位秒，默认30天, -1代表永不过期 
+  timeout: 2592000
+  # token临时有效期 (指定时间内无操作就视为token过期)，单位: 秒
+  activity-timeout: -1
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录) 
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token) 
+  is-share: false
+  # token风格
+  token-style: uuid
+  # 是否输出操作日志 
+  is-log: true
+  # 从cookie当中读取
+  is-read-cookie: true
+
+  is-read-header: true

@@ -1,0 +1,28 @@
+:root {
+  --el-color-primary: #409eff;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-operations {
+  margin-bottom: 16px;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: right;
+}

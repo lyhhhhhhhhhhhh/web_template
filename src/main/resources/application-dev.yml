@@ -1,0 +1,10 @@
+spring:
+  profiles: dev
+  
+server:
+  port: 8080
+  
+# 打印SQL日志
+logging:
+  level:
+    com.example.template.mapper: debug 
