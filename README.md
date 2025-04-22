@@ -54,7 +54,7 @@ src/main/java/com/example/template/
 
 2. 创建数据库
    ```sql
-   CREATE DATABASE template DEFAULT CHARACTER SET utf8mb4;
+   CREATE DATABASE template_sql DEFAULT CHARACTER SET utf8mb4;
    ```
 
 3. 执行 SQL 脚本

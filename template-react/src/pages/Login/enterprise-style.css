@@ -1,0 +1,244 @@
+/* 企业风格的登录样式 */
+.enterprise-login-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  overflow: hidden;
+}
+
+.enterprise-login-row {
+  height: 100vh;
+}
+
+.enterprise-login-banner {
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(16, 24, 40, 0.9) 0%, rgba(16, 24, 40, 0.6) 100%);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.banner-title {
+  font-size: 48px !important;
+  margin-bottom: 24px !important;
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+.banner-desc {
+  font-size: 18px !important;
+  margin-bottom: 64px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  max-width: 500px;
+}
+
+.banner-features {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.feature-icon {
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.feature-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: white;
+}
+
+.feature-text p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.enterprise-login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.enterprise-login-form-wrapper {
+  width: 100%;
+  max-width: 440px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 48px;
+}
+
+.enterprise-login-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.enterprise-login-logo {
+  height: 48px;
+  margin-bottom: 24px;
+}
+
+.enterprise-login-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+
+.enterprise-login-subtitle {
+  font-size: 14px !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.enterprise-login-form .ant-form-item {
+  margin-bottom: 24px;
+}
+
+.login-form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-form-forgot {
+  float: right;
+  color: #1890ff;
+}
+
+.enterprise-login-button {
+  height: 44px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.enterprise-login-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.register-link {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* 企业风格的注册页面 */
+.enterprise-register-container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  overflow: hidden;
+}
+
+.enterprise-register-row {
+  height: 100vh;
+}
+
+.enterprise-register-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.enterprise-register-form-wrapper {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+.enterprise-register-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.enterprise-register-logo {
+  height: 48px;
+  margin-bottom: 24px;
+}
+
+.enterprise-register-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+
+.enterprise-register-subtitle {
+  font-size: 14px !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.enterprise-register-steps {
+  margin-bottom: 40px;
+}
+
+.enterprise-register-button {
+  height: 44px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 24px;
+}
+
+/* 响应式样式 */
+@media (max-width: 1200px) {
+  .banner-content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .enterprise-login-row {
+    height: auto;
+  }
+
+  .enterprise-login-banner {
+    display: none;
+  }
+
+  .enterprise-login-form-container {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .enterprise-login-form-container {
+    padding: 40px 20px;
+  }
+
+  .enterprise-login-form-wrapper {
+    padding: 40px 20px;
+  }
+}

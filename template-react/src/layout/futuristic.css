@@ -1,0 +1,268 @@
+/* 未来科技风格 - 主题样式 */
+.futuristic-layout {
+  min-height: 100vh;
+  background: #f0f5ff;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.futuristic-layout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(200, 220, 255, 0.4), rgba(240, 245, 255, 0.2));
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 侧边栏样式 */
+.futuristic-sider {
+  background: rgba(16, 24, 40, 0.95) !important;
+  border-right: 1px solid rgba(87, 100, 255, 0.3);
+  box-shadow: 0 0 15px rgba(63, 94, 251, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.logo-container {
+  height: 64px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 8px;
+  filter: drop-shadow(0 0 4px rgba(63, 94, 251, 0.6));
+  transition: all 0.3s;
+}
+
+.logo-text {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #5468ff, #41d8dd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* 菜单样式 */
+.futuristic-menu {
+  background: transparent !important;
+  border-right: none !important;
+  padding: 10px;
+}
+
+.futuristic-menu .ant-menu-item {
+  margin: 8px 0;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.futuristic-menu .ant-menu-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(63, 94, 251, 0.1), rgba(0, 7, 30, 0));
+  z-index: -1;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.futuristic-menu .ant-menu-item:hover::before,
+.futuristic-menu .ant-menu-item-selected::before {
+  opacity: 1;
+}
+
+.futuristic-menu .ant-menu-item-selected {
+  background: rgba(63, 94, 251, 0.2) !important;
+  border-left: 3px solid #3f5efb;
+}
+
+.futuristic-menu .menu-icon {
+  font-size: 18px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s;
+}
+
+.futuristic-menu .ant-menu-item-selected .menu-icon {
+  color: #3f5efb;
+}
+
+/* 头部样式 */
+.futuristic-header {
+  background: rgba(255, 255, 255, 0.8) !important;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  border-bottom: 1px solid rgba(63, 94, 251, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trigger-button {
+  color: #001529;
+  font-size: 18px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.action-button {
+  color: #001529;
+  font-size: 18px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0 8px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.action-button:hover {
+  color: #3f5efb;
+  transform: translateY(-2px);
+}
+
+.notification-badge .ant-badge-count {
+  background: linear-gradient(45deg, #3f5efb, #41d8dd);
+  box-shadow: 0 0 10px rgba(63, 94, 251, 0.5);
+}
+
+.avatar-divider {
+  height: 20px;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 12px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.user-profile:hover {
+  background: rgba(63, 94, 251, 0.1);
+}
+
+.user-avatar {
+  border: 2px solid #3f5efb;
+  box-shadow: 0 0 10px rgba(63, 94, 251, 0.5);
+}
+
+.username {
+  margin-left: 8px;
+  color: #001529;
+  font-weight: 500;
+}
+
+/* 内容区样式 */
+.futuristic-content {
+  padding: 0;
+  background: #f8faff;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header {
+  padding: 16px 24px;
+  background: rgba(240, 245, 255, 0.8);
+  border-bottom: 1px solid rgba(63, 94, 251, 0.1);
+}
+
+.page-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #001529;
+  display: flex;
+  align-items: center;
+}
+
+.page-icon {
+  margin-right: 8px;
+  font-size: 20px;
+  color: #3f5efb;
+}
+
+.content-wrapper {
+  padding: 24px;
+  min-height: calc(100vh - 64px - 53px - 69px);
+}
+
+/* 底部样式 */
+.futuristic-footer {
+  text-align: center;
+  background: rgba(240, 245, 255, 0.8);
+  color: rgba(0, 21, 41, 0.65);
+  border-top: 1px solid rgba(63, 94, 251, 0.1);
+  padding: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .futuristic-sider {
+    position: fixed;
+    height: 100vh;
+    z-index: 1001;
+  }
+
+  .content-wrapper {
+    padding: 16px;
+  }
+}
+
+/* 动画效果 */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(63, 94, 251, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 15px rgba(63, 94, 251, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(63, 94, 251, 0.5);
+  }
+}

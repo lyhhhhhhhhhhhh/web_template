@@ -12,4 +12,7 @@ public class TemplateApplication {
         SpringApplication.run(TemplateApplication.class, args);
     }
 
-} 
+}
+
+//switchType
+//1855179220439826435
